@@ -2,17 +2,23 @@ package core.basesyntax;
 
 public class Circle extends Figure {
     private static final String FIGURE_NAME = "Circle";
-    private double circumFerence;
+    private double radius;
 
     public Circle(String color, double circumFerence) {
         super(color);
-        this.circumFerence = circumFerence;
+        this.radius = circumFerence;
+    }
+
+    @Override
+    public double getArea() {
+        return Math.PI * (radius * radius);
     }
 
     @Override
     public void toDraw() {
         System.out.println("Figure: " + FIGURE_NAME
                 + ", color: " + this.getColor()
-                + ", circumFerence: " + circumFerence);
+                + ", area: " + this.getArea()
+                + ", radius: " + radius);
     }
 }

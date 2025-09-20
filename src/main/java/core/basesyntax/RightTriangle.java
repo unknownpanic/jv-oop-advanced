@@ -2,17 +2,26 @@ package core.basesyntax;
 
 public class RightTriangle extends Figure {
     private static final String FIGURE_NAME = "RightTriangle";
-    private double hypotenuse;
+    private double firstLeg;
+    private double secondLeg;
 
-    public RightTriangle(String color, double hypotenuse) {
+    public RightTriangle(String color, double firstLeg, double secondLeg) {
         super(color);
-        this.hypotenuse = hypotenuse;
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
+    }
+
+    @Override
+    public double getArea() {
+        return firstLeg * secondLeg * 0.5;
     }
 
     @Override
     public void toDraw() {
         System.out.println("Figure: " + FIGURE_NAME
                 + ", color: " + this.getColor()
-                + ", hypotenuse: " + hypotenuse);
+                + ", area: " + this.getArea()
+                + ", firstLeg: " + firstLeg
+                + "secondLeg: " + secondLeg);
     }
 }

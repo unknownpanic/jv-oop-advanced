@@ -2,17 +2,26 @@ package core.basesyntax;
 
 public class Rectangle extends Figure {
     private static final String FIGURE_NAME = "Rectangle";
-    private double diagonal;
+    private double length;
+    private double width;
 
-    public Rectangle(String color, double diagonal) {
+    public Rectangle(String color, double length, double width) {
         super(color);
-        this.diagonal = diagonal;
+        this.length = length;
+        this.width = width;
+    }
+
+    @Override
+    public double getArea() {
+        return length * width;
     }
 
     @Override
     public void toDraw() {
         System.out.println("Figure: " + FIGURE_NAME
                 + ", color: " + this.getColor()
-                + ", diagonal: " + diagonal);
+                + ", area: " + this.getArea()
+                + ", length: " + length
+                + ", width: " + width);
     }
 }

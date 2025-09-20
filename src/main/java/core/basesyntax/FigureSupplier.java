@@ -17,11 +17,12 @@ public class FigureSupplier {
             case "Circle":
                 return new Circle(randomColor, randomDoubleSpecific);
             case "IsoscelesTrapezoid":
-                return new IsoscelesTrapezoid(randomColor, randomDoubleSpecific);
+                return new IsoscelesTrapezoid(randomColor,
+                        randomDoubleSpecific, randomDoubleSpecific, randomDoubleSpecific);
             case "Rectangle":
-                return new Rectangle(randomColor, randomDoubleSpecific);
+                return new Rectangle(randomColor, randomDoubleSpecific, randomDoubleSpecific);
             case "RightTriangle":
-                return new RightTriangle(randomColor, randomDoubleSpecific);
+                return new RightTriangle(randomColor, randomDoubleSpecific, randomDoubleSpecific);
             case "Square":
                 return new Square(randomColor, randomDoubleSpecific);
             default:
