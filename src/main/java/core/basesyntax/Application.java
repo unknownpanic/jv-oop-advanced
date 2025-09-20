@@ -15,7 +15,7 @@ public class Application {
         }
 
         for (Figure figure : figures) {
-            figure.toDraw();
+            figure.draw();
         }
     }
 }

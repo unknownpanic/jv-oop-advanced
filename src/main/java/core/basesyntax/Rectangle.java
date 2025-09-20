@@ -17,11 +17,11 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void toDraw() {
+    public void draw() {
         System.out.println("Figure: " + FIGURE_NAME
                 + ", color: " + this.getColor()
-                + ", area: " + this.getArea()
-                + ", length: " + length
-                + ", width: " + width);
+                + ", area: " + this.getArea() + " sq. units"
+                + ", length: " + length + " units"
+                + ", width: " + width + " units");
     }
 }

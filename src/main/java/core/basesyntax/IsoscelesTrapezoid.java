@@ -10,6 +10,7 @@ public class IsoscelesTrapezoid extends Figure {
         super(color);
         this.firstBase = firstBase;
         this.secondBase = secondBase;
+        this.height = height;
     }
 
     @Override
@@ -18,12 +19,12 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public void toDraw() {
+    public void draw() {
         System.out.println("Figure: " + FIGURE_NAME
                 + ", color: " + this.getColor()
-                + ", area: " + this.getArea()
-                + ", firstBase: " + firstBase
-                + ", seconfBase: " + secondBase
-                + ", height: " + height);
+                + ", area: " + this.getArea() + " sq. units"
+                + ", firstBase: " + firstBase + " units"
+                + ", seconfBase: " + secondBase + " units"
+                + ", height: " + height + " units");
     }
 }
