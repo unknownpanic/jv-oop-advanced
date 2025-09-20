@@ -3,13 +3,14 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final double DEFAULT_RADIUS = 10;
     private final Random random = new Random();
     private final Figures[] figures = Figures.values();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int index = random.nextInt(figures.length);
-        String nameOfFigure = figures[index].toString();
+        String nameOfFigure = figures[index].name();
         String randomColor = colorSupplier.getRandomColor();
 
         switch (nameOfFigure) {
@@ -30,6 +31,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("White", 10);
+        return new Circle("White", DEFAULT_RADIUS);
     }
 }
