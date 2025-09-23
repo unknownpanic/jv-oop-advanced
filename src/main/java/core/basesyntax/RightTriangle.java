@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private static final String FIGURE_NAME = "RightTriangle";
     private double firstLeg;
     private double secondLeg;
 
@@ -18,7 +17,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + FIGURE_NAME
+        System.out.println("Figure: " + FigureName.RightTriangle
                 + ", color: " + this.getColor()
                 + ", area: " + this.getArea() + " sq. units"
                 + ", firstLeg: " + firstLeg + " units"

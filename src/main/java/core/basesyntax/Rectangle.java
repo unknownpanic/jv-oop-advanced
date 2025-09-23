@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private static final String FIGURE_NAME = "Rectangle";
     private double length;
     private double width;
 
@@ -18,7 +17,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + FIGURE_NAME
+        System.out.println("Figure: " + FigureName.Rectangle
                 + ", color: " + this.getColor()
                 + ", area: " + this.getArea() + " sq. units"
                 + ", length: " + length + " units"

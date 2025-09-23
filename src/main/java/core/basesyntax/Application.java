@@ -13,10 +13,7 @@ public class Application {
             } else {
                 figures[i] = figureSupplier.getRandomFigure();
             }
-        }
-
-        for (Figure figure : figures) {
-            figure.draw();
+            figures[i].draw();
         }
     }
 }
